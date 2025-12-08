@@ -4,10 +4,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="description"
-        content="FGO-SLAM: Fast and Geometric-optical Consistent Gaussian SLAM Enhanced by Opacity Field">
+        content="FGO-SLAM++: Fast and Geometric-optical Consistent Gaussian SLAM Enhanced by Opacity Field">
   <meta name="keywords" content="Gaussian Splatting, Visual SLAM, Surface Reconstruction, Readering">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>FGO-SLAM</title>
+  <title>FGO-SLAM++</title>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
 
@@ -55,7 +55,7 @@
         <div class="column has-text-centered">
           <div class="column is-full-width">
           
-          <h1 class="title is-1 publication-title" style="margin-bottom: 0"><strong>FGO-SLAM:</strong></h1>
+          <h1 class="title is-1 publication-title" style="margin-bottom: 0"><strong>FGO-SLAM++:</strong></h1>
           <h2 class="title is-2 publication-title" style="margin-top: 0; margin-bottom: 0">Fast and Geometric-optical Consistent Gaussian SLAM Enhanced by Opacity Field</h2>
           <br>
           <!-- <h2 class="title is-4 publication-title" style="margin-top: 0; margin-bottom: 0">ICCV 2025</h2>  -->
@@ -157,7 +157,7 @@
         <img src="./img/abstract.png" class="center">
         <div class="content has-text-justified">
           <p>
-            We present <b>FGO-SLAM</b>, a Gaussian SLAM system capable of processing video streams from arbitrary modalities, which performs <b>fast geometric–optical consistent map reconstruction</b> by maintaining an opacity field.
+            We present <b>FGO-SLAM++</b>, a Gaussian SLAM system capable of processing video streams from arbitrary modalities, which performs <b>fast geometric–optical consistent map reconstruction</b> by maintaining an opacity field.
             Existing Gaussian SLAM systems struggle to achieve efficient tracking and mapping while supporting multiple input modalities, often requiring a trade-off between rendering quality and geometric accuracy.
             Our study demonstrates that it is possible to meet all these requirements simultaneously using arbitrary-modality video streams.
             The key idea of our method lies in explicit feature extraction to capture the underlying scene structure and estimate camera poses, followed by a Gaussian-based ray tracing strategy to construct and optimize a continuous opacity field.
@@ -184,7 +184,7 @@
         <img src="./img/overview.png" class="center">
         <div class="content has-text-justified">
           <p style="margin-top: 30px">
-            <b>FGO-SLAM</b> supports <b>mono, stereo, and RGB-D</b> streams, mainly including online tracking and mapping modules, as well as offline surface reconstruction modules. 
+            <b>FGO-SLAM++</b> supports <b>mono, stereo, and RGB-D</b> streams, mainly including online tracking and mapping modules, as well as offline surface reconstruction modules. 
             <b>1)</b> The tracking module perceives geometric features to estimate the camera's attitude and construct a preliminary geometric map. 
             <b>2)</b> The mapping module builds an opaque guided continuous radiation field while optimizing the appearance and geometric information. 
             <b>3)</b> The surface reconstruction module extracts accurate surfaces with the help of SDF surrogate fields and refines the mesh through geometric information.
@@ -256,7 +256,7 @@
 
         <div class="content has-text-justified">
           <p>
-            Our FGO-SLAM has achieved the best visual rendering effect in RGB-D, Mono, and Stereo modes.
+            Our FGO-SLAM++ has achieved the best visual rendering effect in RGB-D, Mono, and Stereo modes.
           </p>
         </div>
         
@@ -352,7 +352,7 @@
         
         <div class="content has-text-justified">
           <p>
-            In the Mono mode, FGO-SLAM's rendering quality remains at a leading level.
+            In the Mono mode, FGO-SLAM++'s rendering quality remains at a leading level.
           </p>
         </div>
 
@@ -487,7 +487,7 @@
 
         <div class="content has-text-justified">
           <p>
-            FGO-SLAM also performs well in geometric reconstruction, capable of rendering multimodal visual data and reconstructing accurate meshes.
+            FGO-SLAM++ also performs well in geometric reconstruction, capable of rendering multimodal visual data and reconstructing accurate meshes.
           </p>
         </div>
 
