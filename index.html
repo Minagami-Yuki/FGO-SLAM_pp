@@ -157,10 +157,10 @@
         <img src="./img/abstract.png" class="center">
         <div class="content has-text-justified">
           <p>
-            We present <b>FGO-SLAM++</b>, a Gaussian SLAM system capable of processing video streams from arbitrary modalities, which performs <b>fast geometric–optical consistent map reconstruction</b> by maintaining an opacity field.
+            We present <b>FGO-SLAM++</b>, a real-time geometry-aware Gaussian SLAM system capable of processing video streams from arbitrary modalities, which performs multi-view consistent map reconstruction by maintaining an opacity field.
             Existing Gaussian SLAM systems struggle to achieve efficient tracking and mapping while supporting multiple input modalities, often requiring a trade-off between rendering quality and geometric accuracy.
             Our study demonstrates that it is possible to meet all these requirements simultaneously using arbitrary-modality video streams.
-            The key idea of our method lies in explicit feature extraction to capture the underlying scene structure and estimate camera poses, followed by a Gaussian-based ray tracing strategy to construct and optimize a continuous opacity field.
+            The key idea of our method lies in explicit geometry feature extraction to capture the underlying scene structure and estimate camera poses, followed by a Gaussian-based ray tracing strategy to construct and optimize a continuous opacity field.
             When loop closure occurs, our approach performs global adjustment to enhance map consistency. Furthermore, we directly extract the surface using the marching tetrahedra method and refine the resulting mesh with an geometric constraint field.
             Extensive experiments show that our method achieves superior performance in terms of tracking accuracy, rendering quality, geometric reconstruction, and real-time efficiency.
           </p>
@@ -184,9 +184,9 @@
         <img src="./img/overview.png" class="center">
         <div class="content has-text-justified">
           <p style="margin-top: 30px">
-            <b>FGO-SLAM++</b> supports <b>mono, stereo, and RGB-D</b> streams, mainly including online tracking and mapping modules, as well as offline surface reconstruction modules. 
+            <b>Overview.</b> <b>FGO-SLAM++</b> supports <b>mono, stereo, and RGB-D</b> streams, mainly including online tracking and mapping modules, as well as offline surface reconstruction modules. 
             <b>1)</b> The tracking module perceives geometric features to estimate the camera's attitude and construct a preliminary geometric map. 
-            <b>2)</b> The mapping module builds an opaque guided continuous radiation field while optimizing the appearance and geometric information. 
+            <b>2)</b> The mapping module builds an opacity guided continuous radiation field while optimizing the appearance and geometric information. 
             <b>3)</b> The surface reconstruction module extracts accurate surfaces with the help of SDF surrogate fields and refines the mesh through geometric information.
           </p>
         </div>
@@ -565,6 +565,27 @@
   </div>
 </section>
 
+<section class="section">
+<div class="container is-max-desktop" style="max-width: 960px; margin: 0 auto;">
+<div class="columns is-centered has-text-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3" style="margin-top: -20px">Application</h2>
+
+        <img src="./img/application.png" class="center">
+        <div class="content has-text-justified">
+          <p style="margin-top: 30px">
+            Visual SLAM provides VR devices with real-time, high-precision pose estimation, while GS-SLAM further incorporates a high-fidelity 3D scene representation. 
+            However, conventional Gaussian maps are difficult to directly integrate into standard application engines and lack physical manipulability. 
+            In contrast, the high-quality mesh reconstructed by FGO-SLAM++ can be seamlessly integrated into various downstream applications.
+            We deploy the reconstructed scene into Unity, where, through the VR device in Figure b, users can observe (Figure c) and control the agent from a first-person perspective. 
+            Such a complete and photorealistic map enhances immersion in virtual environments, making it suitable for a wide range of downstream tasks, including human–computer interaction and embodied-agent training.
+          </p>
+        </div>
+
+    </div>
+  </div>
+  </div>
+</section>
 
 
 <footer class="footer">
@@ -590,6 +611,8 @@
     </div>
   </div>
 </footer>
+
+
 
 
 </body>
